@@ -5,7 +5,6 @@ const HJ_POLL_COOKIE_NAME = "_hjDonePolls"
 const HJ_POLL_COOKIE_SETTINGS = "0%2C680922%2C680922"
 const HJ_POLL_COOKIE_OPTIONS = {domain: "partner.dev.sonnen.de"}
 
-
 export const loginAs = (username, password) => {
     cy.get('#user_email').type(username);
     cy.get('#user_password').type(password);
