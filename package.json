@@ -1,0 +1,16 @@
+{
+  "name": "sonnen-portals-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^7.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --headless --spec \"cypress/integration/sample.spec.js\""
+  },
+  "author": "",
+  "license": "ISC"
+}
