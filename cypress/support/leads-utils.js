@@ -30,5 +30,9 @@ export const getUniqueLead = () => {
 }
 
 export const getLeadDetails = (idx) => {
-        return cy.get('.c-inbox-lead-list-table-item').eq(idx);
+    return cy.get('.c-inbox-lead-list-table-item').eq(idx);
+}
+
+export const getName = (el) => {
+    return el.find('.c-lead-list-name');
 }

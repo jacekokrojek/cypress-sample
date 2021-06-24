@@ -8,6 +8,7 @@ import {
     addLead,
     getLeadDetails,
     getUniqueLead,
+    getName
 } from '../support/leads-utils'
 
 describe('Sonnen Partner Portal', function () {
@@ -19,15 +20,13 @@ describe('Sonnen Partner Portal', function () {
 
     context('When partner is logged in', function () {    
         it('should be able to add a lead', function () {
+            const FIRST_ROW = 0;
             goToLeads();
             addLead(getUniqueLead());
             // Below you can find a sample verification 
             goToLeads(); 
-            getLeadDetails(0)
-            .should(($lead) => {
-                expect($lead.find('.c-lead-list-name')).to.contain("beforeDeployment")
-              });
-        })
+            getName(getLeadDetails(FIRST_ROW)).should('contain.text', 'beforeDeployment')
+        })  
 
         it('should be able to view a lead', function () {
             goToLeads();
